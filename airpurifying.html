@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Airpurifying Plants - Plant Orbit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+     body {
+    background: url("airpurify.png") no-repeat center center fixed;
+    background-size: cover;
+    padding: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2e7d32;
+        }
+
+     .product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 items per row */
+    gap: 25px;
+}
+
+        .product-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0 10px;
+        }
+
+        .price {
+            color: #1b5e20;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: #2e7d32;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: 600;
+        }
+        .add-btn {
+    background-color: #2e7d32; /* Dark green */
+    color: #fff;               /* White text */
+    padding: 10px 20px;        /* Bigger clickable area */
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;     /* Makes it a proper box */
+    width: 100%;               /* Fill the card width */
+    text-align: center;        /* Center the text */
+}
+
+/* Hover effect */
+.add-btn:hover {
+    background-color: #1b5e20; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+    </style>
+</head>
+
+<body>
+    
+
+<a href="index.html" class="back">← Back to Home</a>
+
+<h1>Airpurifying Plants</h1>
+
+<div class="product-grid">
+
+    <div class="product-card">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.EYfGh5x9XuUzXdDksNqv3AHaHa?pid=Api&P=0&h=180" alt="">
+        <h3>Boston Fern</h3>
+        <div class="price">₹299</div>
+         <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1565817442-5149YgWfc2L.jpg?crop=1xw:1.00xh;center,top&resize=980:*" alt="">
+        <h3>English Ivy</h3>
+        <div class="price">₹399</div>
+       <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/1706/1307/products/Rhapis-excelsa-Lady-Palm-100cm_2000x.jpg?v=1568963580" alt="">
+        <h3>Lady Palm (Rhapis Palm)</h3>
+        <div class="price">₹499</div>
+       <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.IoSAMoZ2925xmvOWjFxo3QHaEp?pid=Api&P=0&h=180" alt="">
+        <h3>Gerbera Daisy</h3>
+        <div class="price">₹349</div>
+        <button class="add-btn">Add to Cart</button>
+    </div>
+  <div class="product-card">
+        <img src="https://thecontentedplant.com/wp-content/uploads/2021/12/weeping-fig.jpg" alt="">
+        <h3>Weeping Fig (Ficus Benjamina)</h3>
+        <div class="price">₹299</div>
+         <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.2ZzQZzv9P4IJJh7Gp2XALAHaHa?pid=Api&P=0&h=180" alt="">
+        <h3>Flamingo Lily (Anthurium)</h3>
+        <div class="price">₹399</div>
+        <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.Kxt32Igk12VG_4TdR3pnMgHaFq?pid=Api&P=0&h=180" alt="">
+        <h3>Philodendron</h3>
+        <div class="price">₹499</div>
+         <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://shop.hicksnurseries.com/cdn/shop/products/available-for-pickup-delivery-indoor-plants-parlor-palm-8-inch-30547089817792_1024x1024.jpg?v=1676417602" alt="">
+        <h3>Parlor Palm</h3>
+        <div class="price">₹349</div>
+         <button class="add-btn">Add to Cart</button>
+    </div>
+     <div class="product-card">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.r1TmD3PFUpGMFqrcbgU6hAHaKB?pid=Api&P=0&h=180" alt="">
+        <h3>Kentia Palm</h3>
+        <div class="price">₹499</div>
+         <button class="add-btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.lsstHoiix1y1FIXNRaLaNgHaHW?pid=Api&P=0&h=180" alt="">
+        <h3>Corn Plant (Dracaena fragrans)</h3>
+        <div class="price">₹349</div>
+         <button class="add-btn">Add to Cart</button>
+    </div>
+
+</div>
+<script src="java.js"></script>
+
+</body>
+</html>

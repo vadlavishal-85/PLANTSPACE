@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart - Plant Orbit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+       body{
+    font-family:Poppins,sans-serif;
+    padding:40px;
+    background:linear-gradient(135deg,#f1f8e9,#e8f5e9);
+}
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #cart-container{
+    max-width: 700px;
+    margin: auto;
+}
+
+        .cart-item{
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+        .empty {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #2e7d32;
+            font-weight: bold;
+        }
+
+       button{
+    background:#e53935;
+    color:white;
+    padding:8px 14px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#c62828;
+}
+
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="back">← Back to Home</a>
+
+<h1>Your Cart</h1>
+
+<div id="cart-container"></div>
+<script>
+
+const cartContainer = document.getElementById("cart-container");
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function getPriceNumber(priceText) {
+
+    // Extract number from text like "From Rs.79"
+    const match = priceText.match(/\d+/);
+
+    return match ? parseInt(match[0]) : 0;
+}
+
+function renderCart() {
+
+    cartContainer.innerHTML = "";
+
+    if (cart.length === 0) {
+        cartContainer.innerHTML = "<p class='empty'>Your cart is empty 🌿</p>";
+        return;
+    }
+
+    let total = 0;
+
+    cart.forEach((item, index) => {
+
+        const priceNumber = getPriceNumber(item.price);
+
+        total += priceNumber;
+
+        const div = document.createElement("div");
+        div.className = "cart-item";
+
+        div.innerHTML = `
+            <h3>${item.name}</h3>
+            <p>${item.price}</p>
+            <button onclick="removeItem(${index})">Remove</button>
+        `;
+
+        cartContainer.appendChild(div);
+    });
+
+    // TOTAL DISPLAY
+    const totalDiv = document.createElement("div");
+
+    totalDiv.style.marginTop = "20px";
+    totalDiv.style.fontSize = "20px";
+    totalDiv.style.fontWeight = "bold";
+    totalDiv.style.textAlign = "right";
+
+    totalDiv.innerHTML = `Total Amount: ₹${total}`;
+
+    cartContainer.appendChild(totalDiv);
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    renderCart();
+}
+
+renderCart();
+
+</script>
+
+</body>
+</html>
